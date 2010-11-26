@@ -1,0 +1,5 @@
+; $Id$
+name = Empty paragraph killer
+description = Filters out pesky empty paragraphs.
+package = Input filters
+core = 6.x
