@@ -1,4 +1,4 @@
-$Id$
+/* $Id$ */
 Empty paragraph killer - sometimes users are overzealous with the
 carriage return
 
@@ -22,18 +22,17 @@ no benefit in using this module.
 
 -- INSTALLATION --
 
-* Install as usual, see http://drupal.org/node/70151 for further
+* Install as usual, see http://drupal.org/node/895232 for further
 information.
 
 -- CONFIGURATION --
 
-* Go to your input formats (/admin/settings/filters)
+* Go to your input formats (/admin/config/content/formats)
 * Click the configure link next to the desired input format
 * Click the checkbox next to 'Empty paragraph filter'.
-
-You may also need to increase the weight of this filter so that it is
-triggered after the HTML filter, Line break converter and HTML corrector
-if these filters are present (under the 'Rearrange' tab).
+* Under the "Filter processing order", ensure Empty paragraph killer is at the
+  bottom of the list, unless you know there are other filters that need to be
+  processed afterwards.
 
 -- CONTACT --
 

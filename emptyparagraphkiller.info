@@ -1,5 +1,6 @@
 ; $Id$
 name = Empty paragraph killer
 description = Filters out pesky empty paragraphs.
+core = 7.x
 package = Input filters
-core = 6.x
+files[] = emptyparagraphfilter.module
