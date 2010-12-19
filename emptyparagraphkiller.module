@@ -15,13 +15,6 @@ function emptyparagraphkiller_filter_info() {
     'title' => t('Empty paragraph filter'),
     'description' => t('When entering more than one carriage return, only the first will be honored.'),
     'process callback' => 'emptyparagraphkiller__emptyparagraphkiller_process',
-    /* settings callback and default settings not used
-    'settings callback' => 'emptyparagraphkiller_settings',
-    'default settings' => array(
-      'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
-      'filter_html_help' => 1,
-      'filter_html_nofollow' => 0,
-    ),*/
     'cache' => FALSE,
     'tips callback' => 'emptyparagraphkiller_emptyparagraphkiller_tips',
     'weight' => 10,
@@ -49,25 +42,3 @@ function emptyparagraphkiller_emptyparagraphkiller_tips($filter, $format, $long)
     return t('Empty paragraph killer - multiple returns will not break the site\'s style.');
   }
 }
-
-/**
- * Implements hook_filter_format_insert().
- */
-/* function emptyparagraphkiler_filter_format_insert($format) {
-  emptyparagraphkiler_cache_rebuild();
-}*/
-
-/**
- * Implements hook_filter_format_update().
- * @todo - research hook_cache_rebuild() (if it exists)
- */
-/* function emptyparagraphkiller_filter_format_update($format) {
-  emptyparagraphkiller_cache_rebuild();
-}*/
-
-/**
- * Implements hook_filter_format_disable().
- */
-/* function emptyparagraphkiler_filter_format_disable($format) {
-  emptyparagraphkiler_cache_rebuild();
-}*/
