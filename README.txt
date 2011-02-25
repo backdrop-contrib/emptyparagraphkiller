@@ -1,4 +1,3 @@
-/* $Id$ */
 Empty paragraph killer - sometimes users are overzealous with the
 carriage return
 
