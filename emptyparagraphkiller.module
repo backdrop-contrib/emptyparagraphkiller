@@ -13,7 +13,8 @@ function emptyparagraphkiller_filter_info() {
   $filters['emptyparagraphkiller'] = array(
     'title' => t('Empty paragraph filter'),
     'description' => t('When entering more than one carriage return, only the first will be honored.'),
-    'process callback' => 'emptyparagraphkiller__emptyparagraphkiller_process',
+    'prepare callback' => '_emptyparagraphkiller_filter_emptyparagraphkiller_prepare',
+    'process callback' => '_emptyparagraphkiller_filter_emptyparagraphkiller_process',
     'cache' => FALSE,
     'tips callback' => 'emptyparagraphkiller_emptyparagraphkiller_tips',
     'weight' => 10,
@@ -23,10 +24,25 @@ function emptyparagraphkiller_filter_info() {
 }
 
 /**
- * Process callback for the emptyparagraphkillter filter.
+ * Prepare callback for the emptyparagraphkiller filter.
  */
-function emptyparagraphkiller__emptyparagraphkiller_process($text, $filter, $format, $langcode, $cache, $cache_id) {
-  $text = preg_replace('#<p[^>]*>(\s|&nbsp;?)*</p>#', '', $text);
+function _emptyparagraphkiller_filter_emptyparagraphkiller_prepare($text, $filter) {
+  //dsm('prepare_pre: ' . $text);
+  $text = preg_replace('#<p[^>]*>(\s|&nbsp;?)*</p>#', '[empty-para]', $text);
+  //dsm('prepare_post: ' . $text);
+  return $text;
+}
+
+/**
+ * Process callback for the emptyparagraphkiller filter.
+ */
+//function emptyparagraphkiller_filter_emptyparagraphkiller_process($text, $filter, $format, $langcode, $cache, $cache_id) {
+function _emptyparagraphkiller_filter_emptyparagraphkiller_process($text, $filter) {
+  //dsm('process_pre: ' . $text);
+  $text = str_replace('[empty-para]', '', $text);
+  //return preg_replace('#<p[^>]*>(\s|&nbsp;?)*</p>#', '', $text);
+  //$text = preg_replace('#<p[^>]*>(\s|&nbsp;?)*</p>#', '', $text);
+  //dsm('process_post: ' . $text);
   return $text;
 }
 
