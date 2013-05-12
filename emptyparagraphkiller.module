@@ -24,7 +24,7 @@ function emptyparagraphkiller_filter_info() {
  * Prepare callback for the emptyparagraphkiller filter.
  */
 function _emptyparagraphkiller_prepare($text, $filter) {
-  return preg_replace('#<p[^>]*>(\s|&nbsp;?)*</p>#', '[empty-para]', $text);
+  return preg_replace('/<p[^>]*>(&nbsp;|\s)*<\/p>/ui', '[empty-para]', $text);
 }
 
 /**
