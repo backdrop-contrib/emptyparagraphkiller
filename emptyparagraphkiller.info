@@ -1,5 +1,5 @@
 name = Empty paragraph killer
-description = Filters out pesky empty paragraphs.
-core = 7.x
-package = Input filters
-files[] = emptyparagraphfilter.module
+description = Provides a field formatter that filters out pesky empty paragraphs.
+backdrop = 1.x
+type = module
+package = Fields
