@@ -4,7 +4,7 @@ Empty Paragraph Killer
 Text filter that removes empty paragraphs.
 
 Empty Paragraph Killer is helpful if your writers tend to press return twice 
-between paragraphs, resulting in an "empty" paragraph (`<p>&nbsp;</p>`) when the 
+between paragraphs, resulting in an "empty" paragraph (p nbsp; /p) when the 
 content is viewed. This module removes that sort of paragraph.
 
 
