@@ -1,4 +1,4 @@
-name = Empty paragraph killer
+name = Empty Paragraph Killer
 description = Provides a field formatter that filters out pesky empty paragraphs.
 backdrop = 1.x
 type = module
