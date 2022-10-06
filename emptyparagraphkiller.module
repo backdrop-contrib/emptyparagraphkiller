@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Empty paragraph killer: because users are sometimes overzealous
+ * Empty Paragraph Killer: because users are sometimes overzealous
  * with the return key.
  */
 
@@ -42,6 +42,6 @@ function _emptyparagraphkiller_tips($filter, $format, $long) {
     return t('Your typing habits may include hitting the return key twice when completing a paragraph. This site will accomodate your habit, and ensure the content is in keeping with the the stylistic formatting of the site\'s theme.');
   }
   else {
-    return t('Empty paragraph killer - multiple returns will not break the site\'s style.');
+    return t('Empty Paragraph Killer - multiple returns will not break the site\'s style.');
   }
 }
